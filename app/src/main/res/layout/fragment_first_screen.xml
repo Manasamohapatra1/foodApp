@@ -43,8 +43,8 @@
             android:text="@string/desc_one"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="13dp"
-            app:autoSizeMaxTextSize="13dp" />
+            android:textSize="14dp"
+            app:autoSizeMaxTextSize="14dp" />
     </LinearLayout>
 
 
