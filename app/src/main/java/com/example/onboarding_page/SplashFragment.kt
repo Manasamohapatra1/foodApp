@@ -1,5 +1,6 @@
 package com.example.onboarding_page
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -20,11 +21,17 @@ class SplashFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         Handler(Looper.getMainLooper()).postDelayed({
-            findNavController().navigate(R.id.navigate_splashFragment_to_onBoardingFragment)
+            if (onBoardingIsFinished()){
+                findNavController().navigate(R.id.navigate_splashFragment_to_homeFragment)
+            }else{
+                findNavController().navigate(R.id.navigate_splashFragment_to_onBoardingFragment)}
         },2000)
         val view = inflater.inflate(R.layout.fragment_splash, container, false)
 
         return view
     }
-
+    private fun onBoardingIsFinished():Boolean{
+        val sharedPreferences= requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        return sharedPreferences.getBoolean("next",false)
+    }
 }
