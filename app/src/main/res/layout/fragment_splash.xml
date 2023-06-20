@@ -14,15 +14,18 @@
         android:orientation="vertical"
         android:visibility="visible"
         app:flow_horizontalAlign="center"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-271dp">
+        app:flow_verticalAlign="center"
+
+        >
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginTop="250dp"
-            android:src="@drawable/img_1" />
+            android:src="@drawable/img_1"
+            app:flow_horizontalAlign="center"
+            app:flow_verticalAlign="center"
+            android:layout_marginTop="260dp"/>
     </LinearLayout>
 
 
